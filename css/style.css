@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+}
+
+.title {
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.subtitle {
+  width: 100%;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.tab-container {
+  display: flex;
+  text-align: center;
+  width: 100%;
+}
+
+.tab {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  background-color: white;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid black;
+  position: relative;
+  top: 4px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 15px 15px 0 0;
+}
+
+.selected-tab {
+  border-bottom: none;
+}
+
+.container {
+  border: 1px solid black;
+  min-height: calc(100vh - 150px);
+}
+
+.yellow-bg {
+  background-color: #fffff6;
+}
+
+.blue-bg {
+  background-color: #f6fbff;
+}
+
+.red-bg {
+  background-color: #fff8fa;
+}
+
+.dark-red-bg {
+  background-color: #fbf1f1;
+}
+
+.green-bg {
+  background-color: #f5fff5;
+}
+
+.tab-content-container {
+  margin: 40px 10px 10px 10px;
+  text-align: center;
+}
+
+.tab-content-additional-padding {
+  padding-bottom: 100px;
+}
+
+.qr-scanner-container {
+  overflow: hidden;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+#snapshot {
+  margin-bottom: 15px;
+}
+
+.form-wrapper {
+  border: 1px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.field-label {
+  margin: 5px 0 5px 0;
+  width: 100%;
+}
+
+.field-input {
+  margin: 5px 0 5px 0;
+  width: 90%;
+  text-align: center;
+}
+
+input {
+  height: 20px;
+}
+
+.button {
+  cursor: pointer;
+  padding: 0;
+  width: 90%;
+  height: 30px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.half-button {
+  cursor: pointer;
+  padding: 0;
+  width: 45%;
+  height: 30px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.datetime-fields-container {
+  width: calc(90% + 6px);
+  margin: auto;
+}
+
+.datetime-column {
+  display: inline-block;
+  width: calc(50% - 10px);
+  padding-top: 10px;
+}
+
+.padding-left {
+  padding-left: 10px;
+}
+
+.padding-right {
+  padding-right: 10px;
+}
+
+.datetime-input {
+  width: calc(100% - 4px);
+  text-align: center;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+#qr-code-container {
+  margin: auto;
+  width: 256px;
+  padding-bottom: 20px;
+}
+
+.contact-list-row {
+  background-color: #fbf1f1;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 10px;
+  border: 1px solid #d8d8d8;
+  padding: 10px 0;
+}
+
+.contact-list-row-item {
+  margin-bottom: 5px;
+}
+
+.alert-message-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#install-button {
+  background-color: #b0daff;
+  box-shadow: inset 0px 6px 20px 0px #66769a;
+  font-size: 50px;
+  width: 100%;
+  text-align: center;
+  line-height: 10vh;
+  cursor: pointer;
+}
+
+#update-button {
+  background-color: #fbef9c;
+  box-shadow: inset 0px 6px 20px 0px #919465;
+  font-size: 50px;
+  width: 100%;
+  text-align: center;
+  line-height: 10vh;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}

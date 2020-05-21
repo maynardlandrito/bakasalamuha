@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Bakasalamuha</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <h1 class='title'>Bakasalamuha</h1>
+        <h3 class='subtitle'>Contact Tracing App</h3>
+        <h5 class='subtitle'>By Maynard Landrito</h5>
+        <div class='tab-container'>
+          <div class='tab add-contact-tab yellow-bg'>Add Contact</div>
+          <div class='tab my-info-tab blue-bg'>My Info</div>
+          <div class='tab contact-history-tab red-bg'>Contact History</div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class='add-contact-container tab-content-container hidden'>
+          <div>
+            <div class='qr-scanner-container'>
+              <video id='camera' autoplay></video>
+              <canvas id='snapshot' class='hidden'></canvas>
+            </div>
+            <div class='form-wrapper'>
+              <div class='field-label'>Name</div>
+              <input type='text' class='contact-name-input field-input contact-input'/>
+              <div class='field-label'>Phone</div>
+              <input type='text' class='contact-phone-input field-input contact-input'/>
+              <div class='field-label'>Address</div>
+              <input type='text' class='contact-address-input field-input contact-input'>
+              <div class='datetime-fields-container'><div
+                class='datetime-column padding-right'><div
+                  class='field-label'>Date</div><input
+                  type='date' class='contact-date-input float-left datetime-input contact-input'>
+                </div><div
+                class='datetime-column padding-left'><div
+                  class='field-label'>Time</div><input
+                  type='time' class='contact-time-input float-right datetime-input contact-input'>
+                </div>
+              </div>
+              <button class='set-datetime-button blue-bg button'>set date and time to now</button>
+            </div>
+            <button class='contact-add-button green-bg button' disabled>add</button>
+          </div>
+        </div>
+        <div class='my-info-container tab-content-container hidden'>
+          <div>
+            <div id='qr-code-container'></div>
+            <div class='form-wrapper'>
+              <div class='field-label'>Name</div>
+              <input type='text' class='info-name-input field-input info-input'/>
+              <div class='field-label'>Phone</div>
+              <input type='text' class='info-phone-input field-input info-input'/>
+              <div class='field-label'>Address</div>
+              <input type='text' class='info-address-input field-input info-input'>
+            </div>
+            <button class='info-save-button green-bg button' disabled>save</button>
+          </div>
+        </div>
+        <div class='contact-history-container tab-content-container hidden'>
+          <div class='contacts-history-list-container'></div>
+          <div class='contacts-history-list-edit hidden'>
+            <div class='form-wrapper'>
+              <div class='field-label'>Name</div>
+              <input type='text' class='edit-name-input field-input contact-input'/>
+              <div class='field-label'>Phone</div>
+              <input type='text' class='edit-phone-input field-input contact-input'/>
+              <div class='field-label'>Address</div>
+              <input type='text' class='edit-address-input field-input contact-input'>
+              <div class='datetime-fields-container'><div
+                class='datetime-column padding-right'><div
+                  class='field-label'>Date</div><input
+                  type='date' class='edit-date-input float-left datetime-input contact-input'>
+                </div><div
+                class='datetime-column padding-left'><div
+                  class='field-label'>Time</div><input
+                  type='time' class='edit-time-input float-right datetime-input contact-input'>
+                </div>
+              </div>
+              <input type='hidden' class='edit-index-input'/>
+            </div>
+            <button class='edit-cancel-button dark-red-bg half-button'>cancel</button>
+            <button class='edit-save-button green-bg half-button'>save</button>
+          </div>
+        </div>
+      </div>
+      <div class='alert-message-container'>
+        <div id='install-button' class='hidden'>Install</div>
+        <div id='update-button' class='hidden'>Update</div>
+      </div>
+    </main>
+    <script src='js/qrcode.min.js'></script>
+    <script src='js/app.js'></script>
+  </body>
+</html>
