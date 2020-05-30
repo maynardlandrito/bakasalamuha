@@ -450,7 +450,7 @@ $(document).ready(() => {
       }
     }
 
-    this.scanCode = () => {
+    this.scanCode = (delayedStart = false) => {
       setTimeout(() => {
         let width = Math.min(video.videoWidth, video.videoHeight);
         snapshotContext.drawImage(video, 0, 0, width, width, 0, 0, width, width);
@@ -462,7 +462,7 @@ $(document).ready(() => {
             height: width,
             imageData: imageData
         });
-      }, 120);
+      }, delayedStart ? 2000 : 120);
     };
 
     this.prefillAddContactForm = (e) => {
@@ -478,8 +478,12 @@ $(document).ready(() => {
         if(!!name) {
           $('.contact-add-button').prop('disabled', false);
         }
+        if(confirm('QR code scanned successfully! Do you want to add this contact?')) {
+          this.addContact();
+          alert('contact added successfully!');
+        }
       }
-      this.scanCode();
+      this.scanCode(true);
     }
 
     this.log = (text) => {
