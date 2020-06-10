@@ -1,6 +1,6 @@
 # Bakasalamuha
 How to install:
-1. Go to the app page: [bit.ly/bakasalamuha](https://bit.ly/bakasalamuha) or https://maynardlandrito.github.io/bakasalamuha/
+1. Go to the app page: [bit.ly/trace-ph](https://bit.ly/trace-ph) or https://maynardlandrito.github.io/bakasalamuha/
 1. Tap install on the bottom of the page and confirm.
 2. Wait for installation to finish and add to home screen.
 
