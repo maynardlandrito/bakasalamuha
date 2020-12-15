@@ -315,8 +315,13 @@ $(document).ready(() => {
       });
     };
 
-    this.saveInfo = () => {
+    this.saveInfo = async () => {
       if(!db) return;
+
+      if (navigator.storage && navigator.storage.persist) {
+        const isPersisted = await navigator.storage.persist();
+        console.log(`Persisted storage granted: ${isPersisted}`);
+      }
 
       let txn = db.transaction('myInfo', 'readwrite');
       let myInfoStore = txn.objectStore('myInfo');
